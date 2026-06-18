@@ -17,7 +17,6 @@ var stravaClientId = Helpers.GetEnvRequired("STRAVA_CLIENT_ID");
 var stravaClientSecret = Helpers.GetEnvRequired("STRAVA_CLIENT_SECRET");
 var geminiApiKey = Helpers.GetEnvRequired("GEMINI_API_KEY");
 
-
 const string RedirectUri = "http://localhost:5000/callback/";
 var stravaOptions = new StravaOptions
 (
