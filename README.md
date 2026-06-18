@@ -178,9 +178,11 @@ Credenciais são lidas exclusivamente via variáveis de ambiente, nunca hardcode
 
 ## Próximos passos
 
-- [ ] Aplicação ser configurada
+- [ ] Aplicação ser configurada por cada user
 - [ ] Persistência com SGBD para histórico de planos gerados
 - [ ] Cache de atividades para reduzir chamadas à API do Strava
 - [ ] Interface web com ASP.NET Core + Blazor para múltiplos usuários
 - [ ] Envio do plano semanal por e-mail toda segunda-feira
 - [ ] Gráficos de evolução de pace ao longo das semanas
+- [ ] User poder selecionar outras AI (pagas)
+
