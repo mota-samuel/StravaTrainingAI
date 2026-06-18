@@ -1,4 +1,4 @@
-﻿### Strava Training AI
+﻿<h1 align="center">Strava Training AI</h1>
 
 Aplicação console em C# que conecta seus dados reais do Strava com o Google Gemini AI
 para gerar planos de treino semanais personalizados.
