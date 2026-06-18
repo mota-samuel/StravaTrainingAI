@@ -124,6 +124,10 @@ No Visual Studio: clique direito no projeto `Presentation` → Properties → De
 | `STRAVA_CLIENT_SECRET` | Client Secret do App Strava |
 | `GEMINI_API_KEY` | Chave gerada no Google AI Studio |
 
+***OU***
+
+Também é possível criar uma cópia do .env.example e realizar o input das variaveis, não esqueça de renomear o arquivo para .env novamente para ser lido pela aplicação.
+
 ### 3. Executar
 
 ```
