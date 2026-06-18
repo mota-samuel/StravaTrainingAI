@@ -34,22 +34,65 @@ Infrastructure ->  Application
 
 ```
 src/
-├── Domain/              # Nucleo — zero dependencias externas
-│   ├── Entities/        # Athlete (Aggregate Root), Activity
-│   ├── ValueObjects/    # Pace, Distance (imutaveis)
-│   └── Repositories/   # Interfaces IAthleteRepository, IActivityRepository
+├── Application/
+│   ├── Interfaces/
+│   │   ├── IStravaService.cs
+│   │   └── ITrainingAIService.cs
+│   └── UseCases/
+│       └── GenerateWeeklyPlanUseCase.cs
 │
-├── Application/         # Casos de uso — depende so do Domain
-│   ├── UseCases/        # GenerateWeeklyPlanUseCase
-│   └── Interfaces/      # IStravaService, ITrainingAIService
+├── Communication/
+│   ├── Records/
+│   │   ├── StravaOptions.cs
+│   │   ├── StravaTokens.cs
+│   │   └── TrainingPlanContext.cs
+│   ├── Request/
+│   │   └── GenerateWeeklyPlanRequest.cs
+│   └── Response/
+│       ├── GenerateWeeklyPlanResponse.cs
+│       └── StravaTokenResponse.cs
 │
-├── Infrastructure/      # Implementacoes externas
-│   ├── Strava/          # StravaService (OAuth + API v3)
-│   ├── AI/              # GeminiService (Gemini 2.5 Flash)
-│   └── Configuration/  # DependencyInjection, OAuthCallbackServer
+├── Domain/
+│   ├── Entities/
+│   │   ├── Activity.cs
+│   │   └── Athlete.cs
+│   ├── Enum/
+│   │   ├── ActivityType.cs
+│   │   └── FitnessLevel.cs
+│   ├── Extension/
+│   │   └── TimeSpanExtension.cs
+│   ├── Repositories/
+│   │   └── Interfaces/
+│   │       ├── IActivitiesRepository.cs
+│   │       └── IAthleteRepository.cs
+│   └── ValueObjects/
+│       ├── Distance.cs
+│       └── Pace.cs
 │
-└── Presentation/        # Entry point
+├── Infrastructure/
+│   ├── AI/
+│   │   └── Gemini/
+│   │       ├── Models/
+│   │       │   ├── GeminiCandidate.cs
+│   │       │   ├── GeminiContent.cs
+│   │       │   ├── GeminiPart.cs
+│   │       │   └── GeminiResponse.cs
+│   │       └── GeminiService.cs
+│   ├── Configuration/
+│   │   ├── DependencyInjection.cs
+│   │   └── OAuthCallbackServer.cs
+│   └── Strava/
+│       ├── Models/
+│       └── StravaService.cs
+│
+└── Presentation/
+    ├── Helpers/
+    │   └── Helpers.cs
     └── Program.cs
+
+tests/
+
+```
 ```
 
 ---
